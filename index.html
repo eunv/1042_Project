@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8' />
+  <link rel="stylesheet" href="CSS/login.css" />
+  <link rel="stylesheet" href="CSS/signIn.css" />
+  <title>my_Web</title>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth'
+      });
+      calendar.render();
+    });
+
+  </script>
+</head>
+
+<body>
+  <div id='calendar'></div>
+
+  <!-- login Window -->
+  <div id="login_window">
+    <form id="login_form">
+      <p class="login_title">What is your name?</p>
+      <input type="text" class="login_input" maxlength="15" placeholder="your name" autofocus />
+      <div class="line"></div>
+      <button type="submit" class="login_btn">Login</button>
+    </form>
+  </div>
+</body>
+<script src="JS/login.js"></script>
+<script src="JS/signin.js"></script>
+
+</html>
